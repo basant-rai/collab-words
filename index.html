@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halla Garr</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #444;
+    }
+
+    #story {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      background-color: white;
+      padding: 1rem;
+      min-height: 120px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+    }
+
+    #story.new-word {
+      background-color: #fff7d6;
+      /* light highlight when new word appears */
+    }
+
+    input {
+      font-size: 1.2rem;
+      padding: 0.7rem;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    }
+
+    .error {
+      color: #d9534f;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Halla Garr</h1>
+  <div id="story"></div>
+
+  <input id="wordInput" type="text" placeholder="Type one word and press Enter" autocomplete="off" />
+  <div id="error" class="error"></div>
+
+  <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <!-- Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script src="./index.js" >
+   
+  </script>
+</body>
+
+</html>
