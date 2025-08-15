@@ -3,18 +3,16 @@
  *  closures are often used in event handlers and callbacks to maintain state or access variables that were in scope when  the handler or callback was defined 
  * @returns 
  */
-function calculation(...args) {
-
-  console.log("👀 ~ calculation ~ args:", args)
-  return function sum() {
+function calculation() {
+  return function sum(...args) {
+    console.log("👀 ~ calculation ~ args:", args)
     return args.reduce((a, b) => a + b, 0)
     // console.log(a + b)
   }
 }
 
-const sum = calculation(1, 10, 64)
-console.log("👀 ~ sum:", sum())
-// sum()
+const sum = calculation()
+console.log("👀 ~ sum:", sum(1, 10, 64))
 
 
 /*

@@ -1,0 +1,44 @@
+/* 
+What is a first class function
+In JavaScript, first-class functions(first-class citizens) mean that functions are treated like any other variable. That means:
+
+You can assign a function to a variable.
+You can pass a function as an argument to another function.
+You can return a function from another function.
+This capability enables powerful patterns like callbacks, higher-order functions, event handling, and functional programming in JavaScript.
+
+For example, the handler function below is assigned to a variable and then passed as an argument to the addEventListener method.
+
+const handler = () => console.log("This is a click handler function");
+document.addEventListener("click", handler);
+⬆ Back to Top
+
+What is a first order function
+A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value. i.e, It's a regular function that works with primitive or non-function values.
+
+const firstOrder = () => console.log("I am a first order function!");
+⬆ Back to Top
+
+What is a higher order function
+A higher-order function is a function that either accepts another function as an argument, returns a function as its result, or both. This concept is a core part of JavaScript's functional programming capabilities and is widely used for creating modular, reusable, and expressive code.
+
+The syntactic structure of higher order function will be explained with an example as follows,
+
+// First-order function (does not accept or return another function)
+const firstOrderFunc = () => 
+  console.log("Hello, I am a first-order function");
+
+// Higher-order function (accepts a function as an argument)
+const higherOrder = (callback) => callback();
+
+// Passing the first-order function to the higher-order function
+higherOrder(firstOrderFunc);
+In this example:
+
+firstOrderFunc is a regular (first-order) function.
+
+higherOrder is a higher-order function because it takes another function as an argument.
+
+firstOrderFunc is also called a callback function because it is passed to and executed by another function.
+
+ */
